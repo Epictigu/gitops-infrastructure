@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoUrl: https://github.com/Epictigu/gitops-infrastructure.git
+    repoURL: https://github.com/Epictigu/gitops-infrastructure.git
     targetRevision: HEAD
     path: dev
   destination:
