@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitops-deployment
+  labels:
+    app: gitops
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gitops
+  template:
+    metadata:
+      labels:
+        app: gitops
+    spec:
+      containers:
+      - name: gitops
+        image: ghcr.io/epictigu/gitops:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 27018
+      imagePullSecrets:
+      - name: dockerconfigjson-github-com
