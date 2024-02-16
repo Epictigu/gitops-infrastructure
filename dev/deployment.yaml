@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: gitops
-        image: ghcr.io/epictigu/gitops:10
+        image: ghcr.io/epictigu/gitops:11
         imagePullPolicy: Always
         ports:
         - containerPort: 27018
